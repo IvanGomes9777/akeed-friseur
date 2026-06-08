@@ -1,0 +1,65 @@
+# ─── Dependencies ───────────────────────────────────────────
+node_modules
+.pnp
+.pnp.js
+
+# ─── Next.js Build Output ───────────────────────────────────
+.next
+out
+build
+dist
+next-env.d.ts
+
+# ─── Env-Vars ───────────────────────────────────────────────
+.env
+.env*
+!.env.example
+
+# ─── TypeScript Cache ───────────────────────────────────────
+tsconfig.tsbuildinfo
+
+# ─── Vercel ─────────────────────────────────────────────────
+.vercel
+
+# ─── Lokale JSON-„DB" (historisch — Ordner existiert nicht mehr, aber sicher ist sicher) ──
+data/
+
+# ─── Sensible Inhaber-Daten ─────────────────────────────────
+inhaber-info/ANTWORTEN.md
+inhaber-info/ZUGANGSDATEN.md
+compliance/avv/
+
+# ─── Interne Compliance-Audit-Docs (nicht für Public-Repo) ──
+compliance/
+inhaber-info/
+
+# ─── Andere Projekte im selben Ordner ───────────────────────
+klarwerk-muenster/
+mauro-ricardo/
+portfolio-ivan/
+projects/
+external-repos/
+higgsfield-out/
+skills/
+skills-lock.json
+.agents/
+
+# ─── Claude-Code-Workspace-Files ────────────────────────────
+.claude/
+DEPLOY.md
+VERCEL-SETUP.md
+
+# ─── Logs / Debug ───────────────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# ─── Editor / OS ────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+.idea
+.DS_Store
+Thumbs.db

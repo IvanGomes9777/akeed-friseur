@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0907;
+  --color-bg-soft: #14110d;
+  --color-surface: #1c1813;
+  --color-ink: #f5efe4;
+  --color-ink-soft: #b8ad99;
+  --color-ink-dim: #7a7163;
+  --color-gold: #c9a16a;
+  --color-gold-soft: #e0c08a;
+  --color-gold-dim: #8a6d44;
+  --color-line: rgba(201, 161, 106, 0.12);
+
+  --font-display: var(--font-cormorant), "Playfair Display", Georgia, serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+}
+
+/* Fonts werden via next/font/google in app/layout.tsx selbst gehostet —
+   keine Anfragen an fonts.gstatic.com zur Laufzeit. */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.reviews-scroller::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+body {
+  background-image:
+    radial-gradient(1200px 600px at 80% -10%, rgba(201, 161, 106, 0.08), transparent 60%),
+    radial-gradient(900px 500px at -10% 30%, rgba(201, 161, 106, 0.04), transparent 60%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-bg);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-dim), transparent);
+}
+
+.gold-underline {
+  background-image: linear-gradient(90deg, var(--color-gold), var(--color-gold));
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
+
+.noise::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.loader {
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgba(201, 161, 106, 0.2);
+  border-top-color: var(--color-gold);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--color-gold);
+  color: var(--color-bg);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  transition: transform 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  box-shadow: 0 0 0 0 rgba(201, 161, 106, 0.4);
+}
+.btn-gold:hover {
+  background: var(--color-gold-soft);
+  box-shadow: 0 14px 40px -10px rgba(201, 161, 106, 0.6);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid var(--color-line);
+  color: var(--color-ink);
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  transition: border-color 200ms ease, background 200ms ease;
+}
+.btn-ghost:hover {
+  border-color: var(--color-gold);
+  background: rgba(201, 161, 106, 0.05);
+}
+
+.legal-prose {
+  color: var(--color-ink-soft);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.legal-prose h2 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--color-ink);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+.legal-prose h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--color-ink);
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.legal-prose p {
+  margin-bottom: 1rem;
+}
+.legal-prose a {
+  color: var(--color-gold);
+  text-decoration: underline;
+  text-decoration-color: var(--color-gold-dim);
+  text-underline-offset: 3px;
+}
+.legal-prose a:hover {
+  color: var(--color-gold-soft);
+}
+.legal-prose ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+.legal-prose ul li {
+  margin-bottom: 0.4rem;
+}
+.legal-prose strong {
+  color: var(--color-ink);
+  font-weight: 500;
+}
+.legal-prose hr {
+  border: none;
+  border-top: 1px solid var(--color-line);
+  margin: 2rem 0;
+}
+.legal-prose blockquote {
+  border-left: 2px solid var(--color-gold-dim);
+  padding: 0.25rem 0 0.25rem 1rem;
+  color: var(--color-ink-dim);
+  font-style: italic;
+  margin: 1.5rem 0;
+}
