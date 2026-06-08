@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0907;
+  --color-bg-soft: #14110d;
+  --color-ink: #f5efe4;
+  --color-ink-soft: #b8ad99;
+  --color-ink-dim: #7a7163;
+  --color-gold: #c9a16a;
+  --color-gold-soft: #e0c08a;
+  --color-gold-dim: #8a6d44;
+  --color-line: #c9a16a1f;
+
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  .font-display {
+    font-family: var(--font-display);
+    font-weight: 400;
+  }
+  .noise {
+    position: relative;
+  }
+  .noise::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.55'/></svg>");
+  }
+}
+
+@layer components {
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-gold);
+    color: var(--color-bg);
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    box-shadow: 0 8px 24px -10px rgba(201, 161, 106, 0.5);
+  }
+  .btn-gold:hover {
+    background: var(--color-gold-soft);
+    transform: translateY(-1px);
+  }
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-ink);
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    border: 1px solid var(--color-line);
+    font-size: 0.9375rem;
+    transition: border-color 0.25s ease, color 0.25s ease;
+  }
+  .btn-ghost:hover {
+    border-color: var(--color-gold-dim);
+    color: var(--color-gold);
+  }
+  .hairline {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-gold-dim), transparent);
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+
+@keyframes scissor-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.scissor-spin {
+  animation: scissor-spin 60s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes scissor-cut {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(18deg); }
+}
+.scissor-blade-top {
+  transform-origin: 50% 70%;
+  animation: scissor-cut 2.4s ease-in-out infinite;
+}
+.scissor-blade-bottom {
+  transform-origin: 50% 70%;
+  animation: scissor-cut 2.4s ease-in-out infinite reverse;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.9s ease-out both;
+}
+
+@keyframes ripple {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+.call-ripple {
+  animation: ripple 1.8s ease-out infinite;
+}
