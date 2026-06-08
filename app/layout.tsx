@@ -21,13 +21,13 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Akeed Friseur — Salon in Münster-Roxel",
+  title: "Beispiel Friseur — Salon in zentraler Lage",
   description:
-    "Akeed Friseur in Münster-Roxel. Herrenschnitt, Damenschnitt, Kinderschnitt, Haarfarbe, Dauerwelle. Annette-von-Droste-Hülshoff-Straße 6, 48161 Münster. Termin: 02534 5392626.",
+    "Beispiel Friseur — moderner Salon mit Herrenschnitt, Damenschnitt, Kinderschnitt, Haarfarbe und Dauerwelle. Musterstraße 1, 12345 Musterstadt. Termin: 0123 4567890.",
   openGraph: {
-    title: "Akeed Friseur — Salon in Münster-Roxel",
+    title: "Beispiel Friseur — Salon in zentraler Lage",
     description:
-      "Mit Leidenschaft und Fachkenntnis für deine Haare. Salon in Roxel, 4,7★ bei 181 Rezensionen.",
+      "Mit Leidenschaft und Fachkenntnis für deine Haare. Moderner Salon mit Top-Bewertungen.",
     locale: "de_DE",
     type: "website",
   },

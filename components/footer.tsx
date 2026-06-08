@@ -9,11 +9,11 @@ export function Footer() {
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
             <div className="font-display text-3xl">
-              Akeed <span className="text-gold">·</span> Friseur
+              Beispiel <span className="text-gold">·</span> Friseur
             </div>
             <p className="mt-4 text-ink-soft max-w-md leading-relaxed">
               {business.tagline}. Mit Leidenschaft und Fachkenntnis für deine
-              Haare — Roxel, Münster.
+              Haare.
             </p>
             {(business.socials.instagram || business.socials.facebook) && (
               <div className="mt-6 flex items-center gap-2">
@@ -122,7 +122,7 @@ export function Footer() {
 
         <div className="hairline mt-14" />
         <div className="mt-6 text-sm text-ink-dim">
-          © {new Date().getFullYear()} Akeed Friseur. Alle Rechte vorbehalten.
+          © {new Date().getFullYear()} {business.name}. Alle Rechte vorbehalten.
         </div>
       </div>
     </footer>

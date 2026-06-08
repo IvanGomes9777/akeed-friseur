@@ -1,9 +1,13 @@
-# TODO — vor Live-Schaltung von akeed-friseur.de
+# TODO — vor Live-Schaltung
 
 Stand: Juni 2026. Die Seite läuft als rein statische Next.js-App ohne Backend,
 ohne Datenbank und ohne E-Mail-Versand-Service. Das Kontaktformular nutzt
 `mailto:` — die Anfrage landet im Mail-Programm des Besuchers und wird von dort
-direkt an `akeedsam@gmail.com` geschickt.
+direkt an die in `lib/data.ts` hinterlegte E-Mail-Adresse geschickt.
+
+> ⚠️ Hinweis: Die Seite läuft aktuell mit **Platzhalterdaten** (Beispiel Friseur,
+> Musterstraße 1 etc.). Die ursprünglichen Stammdaten sind in
+> [`ORIGINAL_BUSINESS_INFO.md`](ORIGINAL_BUSINESS_INFO.md) gesichert.
 
 ---
 
@@ -11,9 +15,10 @@ direkt an `akeedsam@gmail.com` geschickt.
 
 ### Rechtliches / Inhalt
 
-- [ ] **Impressum** ([app/impressum/page.tsx](app/impressum/page.tsx)): Nachname von Akeed eintragen („Akeed [Nachname ergänzen]" → echte Nachname)
+- [ ] **Stammdaten** ([lib/data.ts](lib/data.ts) → `business`): Echte Werte einsetzen (Name, Adresse, Telefon, E-Mail). Originaldaten ggf. aus [`ORIGINAL_BUSINESS_INFO.md`](ORIGINAL_BUSINESS_INFO.md) übernehmen.
+- [ ] **Impressum** ([app/impressum/page.tsx](app/impressum/page.tsx)): Vor-/Nachname des Inhabers eintragen ([Vorname Nachname des Inhabers] → echter Name) sowie zuständige Handwerkskammer
 - [ ] **Impressum**: USt-ID eintragen oder Absatz entfernen falls Kleinunternehmer (§ 19 UStG)
-- [ ] **Datenschutz** ([app/datenschutz/page.tsx](app/datenschutz/page.tsx)): Nachname unter „Verantwortliche Stelle" ergänzen
+- [ ] **Datenschutz** ([app/datenschutz/page.tsx](app/datenschutz/page.tsx)): Name unter „Verantwortliche Stelle" ergänzen
 - [ ] **Rechtsanwalt-Review** der drei Legal-Pages (Impressum, Datenschutz, AGB) — die Hinweis-Blöcke in den Pages stehen drin als Erinnerung
 
 ---
@@ -29,16 +34,16 @@ direkt an `akeedsam@gmail.com` geschickt.
   - Beim Tausch: Datei in `/public/images/gallery/` ablegen, dann Pfad in `lib/data.ts` updaten
 - [ ] **About-Section** ([components/about.tsx](components/about.tsx)):
   - Inhaber-Zitat („Wir machen nicht nur Frisuren…") prüfen — passt das, oder eigenes Zitat?
-  - „seit 2015 in Roxel" — Gründungsjahr verifizieren
+  - „seit Jahren am Standort" — Gründungsjahr + Standort verifizieren
   - Stats: „10+ Jahre Erfahrung", „1000+ zufriedene Kunden" — verifizieren oder anpassen
 - [ ] **Social-Media-Links** ([lib/data.ts](lib/data.ts) → `business.socials`):
   - Aktuell `null` — Icons werden in Footer + Kontakt-Section automatisch ausgeblendet
-  - Sobald echte Profile vorhanden: URL eintragen (z.B. `"https://instagram.com/akeed.friseur"`), Icons erscheinen wieder
-- [ ] **Reviews** ([lib/data.ts](lib/data.ts) → `reviews`): aktuell 10 Bewertungen, davon 3 echte (Markus, Luis, Ibrahim) und 7 fiktive. Entscheiden: bei den echten Google-Reviews bleiben (Liste kürzen) oder fiktive durch echte ersetzen.
+  - Sobald echte Profile vorhanden: URL eintragen (z.B. `"https://instagram.com/dein-salon"`), Icons erscheinen wieder
+- [ ] **Reviews** ([lib/data.ts](lib/data.ts) → `reviews`): aktuell 10 Beispiel-Bewertungen — durch echte Reviews des neuen Inhabers ersetzen.
 
 ### Domain
 
-- [ ] **akeed-friseur.de** als Custom Domain in Vercel verbinden
+- [ ] **Custom Domain** in Vercel verbinden
   - DNS-Records (A + CNAME) beim Registrar setzen
   - HTTPS-Zertifikat kommt automatisch via Vercel/Let's Encrypt
 

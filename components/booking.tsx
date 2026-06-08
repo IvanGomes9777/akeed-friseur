@@ -49,7 +49,7 @@ export function Booking() {
     const service = services.find((s) => s.id === serviceId)!
     const subject = `Terminanfrage — ${service.title}`
     const bodyLines = [
-      `Hallo Akeed Friseur,`,
+      `Hallo ${business.name},`,
       ``,
       `ich hätte gern einen Termin für: ${service.title} (${service.duration}, ${service.price}).`,
       ``,

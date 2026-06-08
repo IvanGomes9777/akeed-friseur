@@ -1,23 +1,23 @@
+// HINWEIS: Platzhalterdaten — Originalwerte siehe ORIGINAL_BUSINESS_INFO.md im Repo-Root.
 export const business = {
-  name: "Akeed Friseur",
-  tagline: "Salon im Herzen von Roxel",
+  name: "Beispiel Friseur",
+  tagline: "Salon in zentraler Lage",
   address: {
-    street: "Annette-von-Droste-Hülshoff-Straße 6",
-    zip: "48161",
-    city: "Münster",
-    district: "Roxel",
+    street: "Musterstraße 1",
+    zip: "12345",
+    city: "Musterstadt",
+    district: "Mustermitte",
   },
-  phone: "02534 5392626",
-  phoneLink: "tel:+4925345392626",
-  email: "akeedsam@gmail.com",
-  rating: { score: 4.7, count: 181, source: "Google" },
-  ratingInfobel: { score: 4.8, count: 172, source: "Infobel" },
+  phone: "0123 4567890",
+  phoneLink: "tel:+491234567890",
+  email: "kontakt@beispiel-friseur.de",
+  rating: { score: 4.8, count: 120, source: "Google" },
+  ratingInfobel: { score: 4.7, count: 95, source: "Infobel" },
   socials: {
     facebook: null as string | null,
     instagram: null as string | null,
   },
-  mapsQuery:
-    "Akeed+Friseur,+Annette-von-Droste-Hülshoff-Straße+6,+48161+Münster",
+  mapsQuery: "Musterstraße+1,+12345+Musterstadt",
 }
 
 export const hours = [
@@ -104,7 +104,7 @@ export const reviews = [
     name: "Sabine K.",
     rating: 5,
     when: "vor 2 Monaten",
-    text: "Ich gehe seit Jahren hin — der beste Schnitt in ganz Roxel. Akeed nimmt sich Zeit und hört wirklich zu.",
+    text: "Ich gehe seit Jahren hin — der beste Schnitt im Viertel. Das Team nimmt sich Zeit und hört wirklich zu.",
   },
   {
     name: "Tobias",
@@ -128,7 +128,7 @@ export const reviews = [
     name: "Ahmed",
     rating: 5,
     when: "vor 2 Wochen",
-    text: "Bester Friseur in Münster! Übergänge sind immer sauber, Atmosphäre entspannt.",
+    text: "Bester Friseur in der Stadt! Übergänge sind immer sauber, Atmosphäre entspannt.",
   },
   {
     name: "Lisa M.",
@@ -140,7 +140,7 @@ export const reviews = [
     name: "Daniel R.",
     rating: 5,
     when: "vor 6 Wochen",
-    text: "Komme aus Münster-Mitte hier her — der Weg lohnt sich. Top Beratung, kein Verkaufsdruck.",
+    text: "Komme aus dem Nachbarviertel hier her — der Weg lohnt sich. Top Beratung, kein Verkaufsdruck.",
   },
 ] as const
 

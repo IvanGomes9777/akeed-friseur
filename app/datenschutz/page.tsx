@@ -2,7 +2,7 @@ import { LegalPage } from "@/components/legal-page"
 import { business } from "@/lib/data"
 
 export const metadata = {
-  title: "Datenschutz — Akeed Friseur",
+  title: "Datenschutz — Beispiel Friseur",
   description: "Informationen zur Verarbeitung personenbezogener Daten nach DSGVO.",
 }
 
@@ -19,7 +19,7 @@ export default function DatenschutzPage() {
         <br />
         <strong>{business.name}</strong>
         <br />
-        Inhaber: Akeed [Nachname ergänzen]
+        Inhaber: [Vorname Nachname des Inhabers]
         <br />
         {business.address.street}
         <br />

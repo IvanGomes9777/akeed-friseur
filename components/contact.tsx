@@ -91,7 +91,7 @@ export function Contact() {
                   }}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Akeed Friseur — Karte"
+                  title={`${business.name} — Karte`}
                 />
                 <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-line" />
               </>

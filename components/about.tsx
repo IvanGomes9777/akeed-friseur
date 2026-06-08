@@ -6,8 +6,8 @@ import { gsap, useGSAP } from "@/lib/gsap"
 
 const stats = [
   { value: "10+", label: "Jahre Erfahrung" },
-  { value: "4.7★", label: "Google Bewertung" },
-  { value: "181", label: "Rezensionen" },
+  { value: "4.8★", label: "Google Bewertung" },
+  { value: "120+", label: "Rezensionen" },
   { value: "1000+", label: "zufriedene Kunden" },
 ]
 
@@ -65,9 +65,9 @@ export function About() {
           />
           <div className="about-copy mt-7 space-y-5 text-ink-soft text-lg leading-relaxed">
             <p>
-              Willkommen bei <span className="text-ink">Akeed Friseur</span>.
-              Unser gemütlicher Salon im Herzen von Roxel ist ein Ort, an dem
-              Handwerk auf Herzlichkeit trifft.
+              Willkommen bei <span className="text-ink">Beispiel Friseur</span>.
+              Unser gemütlicher Salon ist ein Ort, an dem Handwerk auf
+              Herzlichkeit trifft.
             </p>
             <p>
               Mit Leidenschaft und Fachkenntnis kümmern wir uns um deine
@@ -129,7 +129,7 @@ export function About() {
                 „Wir machen nicht nur Frisuren — wir machen den Tag schöner."
               </div>
               <div className="mt-4 text-ink-dim text-sm">
-                Akeed Friseur · seit 2015 in Roxel
+                Beispiel Friseur · seit Jahren am Standort
               </div>
             </div>
           </div>
