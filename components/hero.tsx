@@ -77,7 +77,7 @@ export function Hero() {
         <div className="lg:col-span-7 max-w-2xl">
           <div className="hero-eyebrow flex items-center gap-3 text-xs tracking-[0.2em] uppercase text-gold">
             <span className="h-px w-10 bg-gold-dim" />
-            Salon in Münster-Roxel
+            Salon in zentraler Lage
           </div>
 
           <h1 className="font-display mt-6 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.02] tracking-tight">
@@ -110,7 +110,7 @@ export function Hero() {
           </h1>
 
           <p className="hero-lede mt-7 text-lg text-ink-soft max-w-xl leading-relaxed">
-            Unser gemütlicher Salon im Herzen von Roxel lädt ein zum Verwöhnen
+            Unser gemütlicher Salon lädt ein zum Verwöhnen
             und Entspannen. Individuelle Haarschnitte, lebendige Farben und
             ehrliche Beratung — ganz auf dich abgestimmt.
           </p>

@@ -2,7 +2,7 @@ import { LegalPage } from "@/components/legal-page"
 import { business } from "@/lib/data"
 
 export const metadata = {
-  title: "Impressum — Akeed Friseur",
+  title: "Impressum — Beispiel Friseur",
   description: "Impressum und Anbieterkennzeichnung gemäß § 5 TMG.",
 }
 
@@ -13,11 +13,19 @@ export default function ImpressumPage() {
       <p>
         <strong>{business.name}</strong>
         <br />
-        Inhaber: Akeed [Nachname ergänzen]
+        Inhaber: [Vorname Nachname des Inhabers]
         <br />
         {business.address.street}
         <br />
         {business.address.zip} {business.address.city}, Deutschland
+      </p>
+
+      <p>
+        <em>
+          Hinweis: Diese Seite wird derzeit mit Platzhalterdaten betrieben.
+          Die hier angezeigten Angaben sind Beispieldaten und entsprechen
+          keinem real existierenden Unternehmen.
+        </em>
       </p>
 
       <h2>Kontakt</h2>
@@ -42,12 +50,12 @@ export default function ImpressumPage() {
         <br />
         Verliehen in: Deutschland
         <br />
-        Zuständige Kammer: Handwerkskammer Münster, Bismarckallee 1, 48151 Münster
+        Zuständige Kammer: [zuständige Handwerkskammer eintragen]
       </p>
 
       <h2>Redaktionell verantwortlich</h2>
       <p>
-        Akeed [Nachname ergänzen]
+        [Vorname Nachname des Inhabers]
         <br />
         {business.address.street}
         <br />

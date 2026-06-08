@@ -112,7 +112,7 @@ export function PageTransitionProvider({ children }: { children: React.ReactNode
           <div className="flex items-center gap-4 text-gold">
             <span className="h-px w-12 bg-gold-dim" />
             <span className="font-display text-2xl tracking-wide">
-              Akeed <span className="text-gold-soft">·</span> Friseur
+              Beispiel <span className="text-gold-soft">·</span> Friseur
             </span>
             <span className="h-px w-12 bg-gold-dim" />
           </div>

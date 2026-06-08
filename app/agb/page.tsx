@@ -2,9 +2,9 @@ import { LegalPage } from "@/components/legal-page"
 import { business } from "@/lib/data"
 
 export const metadata = {
-  title: "AGB — Akeed Friseur",
+  title: "AGB — Beispiel Friseur",
   description:
-    "Allgemeine Geschäftsbedingungen für Friseurleistungen bei Akeed Friseur.",
+    "Allgemeine Geschäftsbedingungen für Friseurleistungen bei Beispiel Friseur.",
 }
 
 export default function AGBPage() {

@@ -42,7 +42,7 @@ export function Navbar() {
         <SmoothLink href="#top" className="flex items-center gap-2.5 group shrink-0">
           <Logo />
           <span className="font-display text-2xl leading-none tracking-tight">
-            Akeed{" "}
+            Beispiel{" "}
             <span className="text-gold font-light not-italic">·</span>{" "}
             <span className="italic font-light">Friseur</span>
           </span>
