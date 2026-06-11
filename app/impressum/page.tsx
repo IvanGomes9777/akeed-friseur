@@ -3,13 +3,13 @@ import { business } from "@/lib/data"
 
 export const metadata = {
   title: "Impressum — Beispiel Friseur",
-  description: "Impressum und Anbieterkennzeichnung gemäß § 5 TMG.",
+  description: "Impressum und Anbieterkennzeichnung gemäß § 5 DDG.",
 }
 
 export default function ImpressumPage() {
   return (
     <LegalPage eyebrow="Anbieterkennzeichnung" title="Impressum" updated="Mai 2026">
-      <h2>Angaben gemäß § 5 TMG</h2>
+      <h2>Angaben gemäß § 5 DDG</h2>
       <p>
         <strong>{business.name}</strong>
         <br />
@@ -62,17 +62,6 @@ export default function ImpressumPage() {
         {business.address.zip} {business.address.city}
       </p>
 
-      <h2>EU-Streitschlichtung</h2>
-      <p>
-        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung
-        (OS) bereit:{" "}
-        <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noreferrer">
-          https://ec.europa.eu/consumers/odr/
-        </a>
-        .<br />
-        Unsere E-Mail-Adresse findest du oben im Impressum.
-      </p>
-
       <h2>Verbraucher­streit­beilegung / Universalschlichtungsstelle</h2>
       <p>
         Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor
@@ -81,9 +70,9 @@ export default function ImpressumPage() {
 
       <h2>Haftung für Inhalte</h2>
       <p>
-        Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf
-        diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis
-        10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte
+        Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf
+        diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 7 bis
+        10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte
         oder gespeicherte fremde Informationen zu überwachen oder nach Umständen
         zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
       </p>

@@ -144,14 +144,7 @@ export default function DatenschutzPage() {
         .
       </p>
 
-      <h2>7. Bilder über Unsplash</h2>
-      <p>
-        Einzelne Bilder werden vom CDN <strong>Unsplash (Unsplash Inc., Kanada)</strong>{" "}
-        geladen. Hierbei kann deine IP-Adresse an den Anbieter übermittelt
-        werden. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.
-      </p>
-
-      <h2>8. Schriftarten</h2>
+      <h2>7. Schriftarten</h2>
       <p>
         Wir verwenden die Schriftarten <em>Cormorant Garamond</em> und{" "}
         <em>Inter</em>. Diese werden{" "}
@@ -160,16 +153,16 @@ export default function DatenschutzPage() {
         deine IP-Adresse wird nicht an Dritte übermittelt.
       </p>
 
-      <h2>9. Cookies</h2>
+      <h2>8. Cookies</h2>
       <p>
         Unsere Seite setzt <strong>keine</strong> eigenen Cookies. Die Auswahl
         bezüglich der optionalen Google-Maps-Einbettung wird ausschließlich
         lokal in deinem Browser (Local Storage) gespeichert, damit du nicht bei
         jedem Besuch erneut entscheiden musst. Diese Speicherung ist technisch
-        notwendig für die Einwilligungsverwaltung (§ 25 Abs. 2 Nr. 2 TTDSG).
+        notwendig für die Einwilligungsverwaltung (§ 25 Abs. 2 Nr. 2 TDDDG).
       </p>
 
-      <h2>10. Deine Rechte</h2>
+      <h2>9. Deine Rechte</h2>
       <p>Du hast nach DSGVO folgende Rechte:</p>
       <ul>
         <li>Auskunft (Art. 15 DSGVO)</li>
@@ -198,7 +191,7 @@ export default function DatenschutzPage() {
         <a href={`mailto:${business.email}`}>{business.email}</a>.
       </p>
 
-      <h2>11. SSL/TLS-Verschlüsselung</h2>
+      <h2>10. SSL/TLS-Verschlüsselung</h2>
       <p>
         Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung
         vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung.

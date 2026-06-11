@@ -45,7 +45,9 @@ skills-lock.json
 .agents/
 
 # ─── Claude-Code-Workspace-Files ────────────────────────────
-.claude/
+.claude/*
+# Projektlokale Skills versionieren (z. B. webdesign-recht-de)
+!.claude/skills/
 DEPLOY.md
 VERCEL-SETUP.md
 
